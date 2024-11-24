@@ -3,10 +3,9 @@ import { useReducer, useMemo } from "react";
 import { createContext, useContext } from "react";
 
 const INIT_STATE: InitStateObject = {
-    chartWidth: window.innerHeight - 350,
+  chartWidth: window.innerHeight - 350,
 }
 
-// create context
 const GlobalContext = createContext<any>({});
 const reducer = (state: InitStateObject, { type, payload }: ReducerObject) => {
   return { ...state, [type]: payload };
